@@ -1,0 +1,59 @@
+#FrontalDisplay {
+    height: 500px;
+    margin-top: 80px;
+}
+#About {
+    height: 580px;
+}
+#Services {
+    height: 740px
+}
+.repeat-back {
+    background-image: url("../assets/images/nice2.jpeg");
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+.pad-top-right {
+    min-width: 200px;
+    position:relative;
+    top: 80px;
+    margin-right: 800px;
+    text-align: center;
+    height: 600px;
+}
+.div-40{
+    min-height: 40px;
+    background-color: white;
+}
+.pad-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.pad-bottom-50 {
+    padding-bottom: 50px;
+}
+.text-55 {
+    font-size: 55pt;
+}
+.no-style-link {
+    font-size: 20pt;
+}
+.h-200 {
+    height: 300px;
+}
+.no-style-link:hover {
+    text-decoration: none;
+    color: #7592a5;
+}
+.text-white {
+    color: white;
+}
+.white-icon {
+    color: white;
+}
+.white-icon:hover {
+    color: #8abcdd;
+}
+.h-600 {
+    height: 600px;
+}

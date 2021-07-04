@@ -1,0 +1,28 @@
+/* will use this css file to define styles for the nav bar */
+#Nav {
+    background-color: white;
+    opacity: 1;
+    width: inherit;
+    z-index: 2;
+}
+#BottowRow {
+    height: 80px;
+}
+#TopRow {
+    height: 50px;
+}
+.pad-top {
+    height: 25px;
+    margin-top: 12.5px;
+    color: #206b9c
+}
+.color-white {
+    color: #FFFFFF;
+}
+.color-white:hover {
+    color: #4fac53;
+}
+.pad-bottom {
+    height: 40px;
+    margin-top: 15px;
+}
