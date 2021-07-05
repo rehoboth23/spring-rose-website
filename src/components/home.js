@@ -8,12 +8,12 @@ import {
     useHistory,
     useLocation
   } from "react-router-dom";
+import * as $ from 'jquery'
 import "../styles/home.scss"
 
 
 export default function Home(props) {
     let loc = useLocation()
-    let redirectEl = null
     let history = useHistory()
 
     function moreClickHandler(e) {
@@ -24,21 +24,21 @@ export default function Home(props) {
     function pushToHistory(target) {
         target = target === "home" ? "" : target
         history.push(target)
-
     }
+
+    $("html, body")[0].scrollTop = 0
     return (
         <div>
             <MyNav location={loc}/>
-            {redirectEl}
             <div className="container z-0 repeat-back h-600 fixed-top"/>
             <Container expand="xxl"  className="z-1" id="FrontalDisplay">
                 <div className="pad-top-right text-dark-blue">
                     <Row lg={1}>
-                        <Col><h1>Fit Some</h1></Col>
-                        <Col><h1>Nice Text Here</h1></Col>
-                        <Col><h3>For Adults and Children</h3></Col>
+                        <Col><h1 className="text-dark-blue">Fit Some</h1></Col>
+                        <Col><h1 className="text-dark-blue">Nice Text Here</h1></Col>
+                        <Col><h3 className="text-dark-blue">For Adults and Children</h3></Col>
                         <Col>
-                            <h6><b>
+                            <h6 className="text-dark-blue"><b>
                                 Open 24 hours<br/>
                                 Monday-Sunday
                             </b></h6>
@@ -48,8 +48,8 @@ export default function Home(props) {
             </Container>
             <div className="z-1 div-40"/>
             <Container className="z-1 bg-aqua text-center text-dark-blue" id="About">
-                <h2 className="pad-30">About Spring-Rose</h2>
-                <p>
+                <h2 className="pad-30 text-dark-blue">About Spring-Rose</h2>
+                <p className="text-dark-blue">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at dapibus magna. Nullam sed nunc eu sapien commodo tempus eget ac odio.<br />
                     Maecenas porttitor, orci elementum pharetra convallis, neque orci finibus ex, id venenatis justo orci ut risus. In fermentum tempor tortor <br />
                     sit amet dictum. Etiam fringilla enim sed arcu bibendum varius. Mauris pellentesque bibendum gravida. Curabitur nisl elit, scelerisque vel<br /> 
@@ -58,19 +58,19 @@ export default function Home(props) {
                 <Row lg={4} className="pad-30 pad-bottom-50">
                     <Col className="text-55">
                         <FontAwesomeIcon icon={faVial} />
-                        <h6>On Site Lab and Testing</h6>
+                        <h6 className="text-dark-blue">On Site Lab and Testing</h6>
                     </Col>
                     <Col className="text-55">
                         <FontAwesomeIcon icon={faHospitalUser} />
-                        <h6>Open 7 Days a Week</h6>
+                        <h6 className="text-dark-blue">Open 7 Days a Week</h6>
                     </Col>
                     <Col className="text-55">
                         <FontAwesomeIcon icon={faStopwatch} />
-                        <h6>Short Waiting Times</h6>
+                        <h6 className="text-dark-blue">Short Waiting Times</h6>
                     </Col>
                     <Col className="text-55">
                         <FontAwesomeIcon icon={faCalendar} />
-                        <h6>No Appointment Needed</h6>
+                        <h6 className="text-dark-blue">No Appointment Needed</h6>
                     </Col>
                 </Row>
                 <Button onClick={moreClickHandler} variant={"info"} id="_about">
@@ -79,8 +79,8 @@ export default function Home(props) {
             </Container>
             <div className="z-1 div-40"/>
             <Container className="z-1 bg-aqua text-center text-dark-blue" id="Services">
-                <h2 className="pad-30">Our Services</h2>
-                <p>
+                <h2 className="pad-30 text-dark-blue">Our Services</h2>
+                <p className="text-dark-blue">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent at dapibus magna. Nullam sed nunc eu sapien commodo tempus eget ac odio.<br />
                     Maecenas porttitor, orci elementum pharetra convallis, neque orci finibus ex, id venenatis justo orci ut risus. In fermentum tempor tortor <br />
                     sit amet dictum. Etiam fringilla enim sed arcu bibendum varius. Mauris pellentesque bibendum gravida. Curabitur nisl elit, scelerisque vel<br /> 
@@ -128,7 +128,7 @@ export default function Home(props) {
                         </Card>
                     </Col>
                 </Row>
-                <Button onClick={moreClickHandler} variant={"info"} id="_service">
+                <Button onClick={moreClickHandler} variant={"info"} id="_services">
                     All Services
                 </Button>
             </Container>

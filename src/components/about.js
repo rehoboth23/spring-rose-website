@@ -9,9 +9,11 @@ import "../styles/about.scss"
 import {
     useLocation
   } from "react-router-dom";
+import * as $ from 'jquery'
 
 export default function About(props) {
     let loc = useLocation()
+    $("html, body")[0].scrollTop = 0
     return (
         <div>
             <MyNav location={loc}/>

@@ -1,5 +1,6 @@
 import Home from './components/home';
 import About from './components/about'
+import Services from './components/services'
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route exact path="/about">
             <About />
+          </Route>
+          <Route exact path="/services">
+            <Services />
           </Route>
         </Switch>
       </Router>

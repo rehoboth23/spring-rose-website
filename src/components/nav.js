@@ -42,16 +42,16 @@ export default function MyNav(props) {
                     <Col className="pad-bottom">
                         <Nav className="justify-content-end">
                             <Nav.Item>
-                                <Nav.Link onClick={singlePageNavHandler} href="#FrontalDisplay" className="color-white">Home</Nav.Link>
+                                <Nav.Link onClick={singlePageNavHandler} href="#FrontalDisplay" className="no-style-link white-icon">Home</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link onClick={singlePageNavHandler} href="#About" eventKey="about" className="color-white">About</Nav.Link>
+                                <Nav.Link onClick={singlePageNavHandler} href="#About" eventKey="about" className="no-style-link white-icon">About</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link onClick={singlePageNavHandler} href="#Services" eventKey="service" className="color-white">Services</Nav.Link>
+                                <Nav.Link onClick={singlePageNavHandler} href="#Services" eventKey="service" className="no-style-link white-icon">Services</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="contact" className="color-white">Contact</Nav.Link>
+                                <Nav.Link eventKey="contact" className="no-style-link white-icon">Contact</Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </Col>
