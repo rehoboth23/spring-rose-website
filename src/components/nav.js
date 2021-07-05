@@ -13,7 +13,7 @@ export default function MyNav(props) {
         const href = e.target.href.split("#")[1]
         let target_id = `#${href}`
         if (location.pathname === "/") {
-            const top = target_id === "#FrontalDisplay" ? $(target_id).offset().top - 80 : $(target_id).offset().top
+            const top = target_id === "#FrontalDisplay" ? $(target_id).offset().top - 80 : $(target_id).offset().top - 125
             $("html, body").animate({
                 scrollTop: top
             }, 1000)
