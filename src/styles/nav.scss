@@ -1,25 +1,14 @@
 /* will use this css file to define styles for the nav bar */
-#Nav {
-    background-color: white;
-    opacity: 1;
-    width: inherit;
+#PageTop {
     z-index: 2;
+    min-height: 100px;
 }
-#BottowRow {
-    height: 80px;
+.f-vw {
+    font-size: 1.5vw;
 }
-#TopRow {
-    height: 50px;
+.logo{
+    // margin-left: 20px;
 }
-.pad-top {
-    height: 25px;
-    margin-top: 12.5px;
-    color: #206b9c
-}
-.color-white:hover {
-    color: #4fac53;
-}
-.pad-bottom {
-    height: 40px;
-    margin-top: 15px;
+.logo:hover {
+    transform: scale(1.25);
 }

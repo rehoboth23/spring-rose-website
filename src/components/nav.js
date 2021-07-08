@@ -1,4 +1,4 @@
-import {Container, Nav, Row, Col} from 'react-bootstrap'
+import {Nav, Navbar} from 'react-bootstrap'
 import * as $ from 'jquery'
 import {
     useHistory,
@@ -10,15 +10,18 @@ export default function MyNav(props) {
     let history = useHistory()
     function singlePageNavHandler(e) {
         e.preventDefault()
-        const href = e.target.href.split("#")[1]
-        let target_id = `#${href}`
-        if (location.pathname === "/") {
-            const top = target_id === "#FrontalDisplay" ? $(target_id).offset().top - 80 : $(target_id).offset().top - 125
+        let target_id = `${e.target.href.split("*")[1]}`
+        let in_page_nav = location.pathname === "/" && target_id.includes("#")
+
+        if (in_page_nav) {
+            const top = target_id === "#FrontalDisplay" ? $(target_id).offset().top - 145 : $(target_id).offset().top - 125
             $("html, body").animate({
                 scrollTop: top
             }, 1000)
         } else {
-            target_id = target_id.toLocaleLowerCase().split("#")[1]
+            if (target_id.includes("#")) {
+                target_id = target_id.toLocaleLowerCase().split("#")[1]
+            }
             pushToHistory(target_id)
         }
     }
@@ -27,36 +30,29 @@ export default function MyNav(props) {
         history.push(target)
     }
     return (
-        <div id="PageTop">
-            <Container id="Nav" expand="xxl" className="fixed-top">
-                <Row id="TopRow" xs={1} md={2}>
-                    <Col className="pad-top">22 Rumuaghaolu Road, 500272, Port Harcourt, Nigeria</Col>
-                    <Col className="pad-top text-right">Tel: +234-803-340-7031</Col>
-                </Row>
-                <Row id="BottowRow" xs={1} md={2} className="bg-dark-blue">
-                    <Col className="pad-bottom">
-                        <Nav>
-                            LOGO
-                        </Nav>
-                    </Col>
-                    <Col className="pad-bottom">
-                        <Nav className="justify-content-end">
-                            <Nav.Item>
-                                <Nav.Link onClick={singlePageNavHandler} href="#FrontalDisplay" className="no-style-link white-icon">Home</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link onClick={singlePageNavHandler} href="#About" eventKey="about" className="no-style-link white-icon">About</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link onClick={singlePageNavHandler} href="#Services" eventKey="service" className="no-style-link white-icon">Services</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey="contact" className="no-style-link white-icon">Contact</Nav.Link>
-                            </Nav.Item>
-                        </Nav>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
+        <Navbar fixed="top" id="PageTop" collapseOnSelect expand="lg" className="bg-dark-blue" variant="dark">
+            {/* <Button className={"shrink-btn"} variant={"success"}><p className={"f-2"}>Book an Appointment</p></Button> */}
+                <Navbar.Brand href="#home" className="logo">React-Bootstrap</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+                <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" >
+                    <Nav.Item>
+                        <Nav.Link onClick={singlePageNavHandler} href="*#FrontalDisplay" className="no-style-link white-icon f-vw">Home</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link onClick={singlePageNavHandler} href="*#About" eventKey="about" className="no-style-link white-icon f-vw">About</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link onClick={singlePageNavHandler} href="*#Services" eventKey="service" className="no-style-link white-icon f-vw">Services</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link onClick={singlePageNavHandler} href="*contact" eventKey="contact" className="no-style-link white-icon f-vw">Contact</Nav.Link>
+                    </Nav.Item>
+                </Navbar.Collapse>
+                <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end" >
+                    <Nav.Item>
+                        <Nav.Link onClick={singlePageNavHandler} href="*#FrontalDisplay" className="no-style-link white-icon f-vw u-text">Book An Appointment</Nav.Link>
+                    </Nav.Item>
+                </Navbar.Collapse>
+        </Navbar>
     )
 }
