@@ -2,6 +2,7 @@ import MyNav from './nav'
 import Footer from './footer'
 import {Container, Row, Col} from 'react-bootstrap'
 import "../styles/services.scss"
+import FrontalDisplay from './frontaldisplay'
 import {
     useLocation
   } from "react-router-dom";
@@ -13,7 +14,7 @@ export default function Services(props) {
     return (
         <div>
             <MyNav location={loc}/>
-            <div className="z-0 repeat-back-buffer"/>
+            <FrontalDisplay />
             <div className="bg-white z-1">
                 <Container expand="xxl"  className="z-1 pad-top-50 pad-bottom-50 bg-aqua" id="ServicePageTop">
                     <h1 className="pad-10 w-75 text-dark-blue">Our Services<b className="color-lemon">&#8228;</b></h1>

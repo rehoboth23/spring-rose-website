@@ -16,7 +16,7 @@ function App() {
   dotenv.config()
   return (
     <div className="App">
-      <div className="z-0 repeat-back fixed-top"/>
+      <div className="z-0 repeat-back fixed-top" />
       <Router>
         <ScrollToTop />
         <Switch>

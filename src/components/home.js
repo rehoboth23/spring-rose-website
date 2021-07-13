@@ -1,6 +1,7 @@
 import {Container, Row, Col, Button, Card} from 'react-bootstrap'
 import MyNav from './nav'
 import Footer from './footer'
+import FrontalDisplay from './frontaldisplay'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faVial, faHospitalUser, faStopwatch, faCalendar } from '@fortawesome/free-solid-svg-icons'
 import InsertImage from '../assets/images/insert-image.png'
@@ -28,21 +29,7 @@ export default function Home(props) {
     return (
         <div>
             <MyNav location={loc}/>
-            <div expand="xxl"  className="z-1" id="FrontalDisplay">
-                <div className="pad-right text-dark-blue">
-                    <p className="text-dark-blue font-shrink">
-                        <b>
-                            Fit Some<br/>
-                            Nice Text Here<br/>
-                            For Adults and Children
-                        </ b>
-                    </p>
-                    <p className="text-dark-blue font-shrink">
-                        Open 24 hours<br/>
-                        Monday-Sunday
-                    </p>
-                </div>
-            </div>
+            <FrontalDisplay />
             <div className="bg-white z-1">
                 <Container className="z-1 bg-aqua text-center text-dark-blue pad-bottom-50 pad-top-50" id="About">
                     <h2 className="pad-30 text-dark-blue header-text">About Spring-Rose</h2>
@@ -52,7 +39,7 @@ export default function Home(props) {
                         sit amet dictum. Etiam fringilla enim sed arcu bibendum varius. Mauris pellentesque bibendum gravida. Curabitur nisl elit, scelerisque vel<br /> 
                         fermentum vel, consectetur auctor orci. Sed consequat leo quis tellus malesuada, vitae bibendum arcu sodales. <br />
                     </p>
-                    <Row sm={2} md={2} lg={4} className="pad-30 pad-bottom-50">
+                    <Row sm={1} md={2} lg={4} className="pad-30 pad-bottom-50">
                         <Col className="text-55">
                             <FontAwesomeIcon icon={faVial} />
                             <h6 className="text-dark-blue">On Site Lab and Testing</h6>
@@ -82,7 +69,7 @@ export default function Home(props) {
                         sit amet dictum. Etiam fringilla enim sed arcu bibendum varius. Mauris pellentesque bibendum gravida. Curabitur nisl elit, scelerisque vel<br /> 
                         fermentum vel, consectetur auctor orci. Sed consequat leo quis tellus malesuada, vitae bibendum arcu sodales. <br />
                     </p>
-                    <Row sm={2} md={2} lg={4} className="pad-30 pad-bottom-50">
+                    <Row sm={1} md={2} lg={4} className="pad-30 pad-bottom-50">
                         <Col>
                             <Card className={"service-home"}>
                                 <Card.Img border="light" variant="top" src={InsertImage} />

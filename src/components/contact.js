@@ -1,6 +1,7 @@
 import MyNav from './nav'
 import Footer from './footer'
 import {Container} from 'react-bootstrap'
+import FrontalDisplay from './frontaldisplay'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMailBulk, faPhone } from '@fortawesome/free-solid-svg-icons'
 import {
@@ -13,7 +14,7 @@ export default function Contact(props) {
     return (
         <div>
             <MyNav location={loc}/>
-            <div className="z-0 repeat-back-buffer"/>
+            <FrontalDisplay />
             <div className="bg-white z-1">
                 <Container expand="xxl"  className="z-1 pad-top-50 pad-bottom-50 bg-aqua" id="ContactPageTop">
                     <h1 className="pad-10 w-75 text-dark-blue header-text">Contact Us<b className="color-lemon">&#8228;</b></h1>

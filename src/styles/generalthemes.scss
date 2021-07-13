@@ -1,6 +1,21 @@
 /* will use this css file to define style that will stay the same across multiple components */
+#FrontalDisplay {
+    height: 65vh;
+    width: 100%;
+    margin-top: 100px;
+}
+#FrontalDisplay button {
+    min-width: 30%;
+    height: 80px;
+    font-size: 35pt;
+    text-align: left;
+}
+#FrontalDisplay div {
+    padding-left: 10px;
+    padding-top: 30px;
+}
 .bg-dark-blue {
-    background-color: #3ac9bd;
+    background-color: #0cb661;
 }
 .bg-aqua {
     background-color: #ffffff;
@@ -12,20 +27,17 @@
     background-size: cover;
     height: 85vh;
 }
-.service-home {
+.service-homes {
     height: 150px;
     width: 150px;
     margin-left: 60px;
     position: relative;
 }
-.repeat-back-buffer {
-    height: 65vh;
-}
 .font-shrink {
     font-size: 2.5vh;
 }
 .shrink-btn {
-    height: 50px;
+    min-height: 50px;
 }
 .text-dark-blue {
     color: #165b8a;
@@ -54,7 +66,6 @@
     font-size: 1.5vw;;
 }
 .pad-top-50 {
-    // margin-top: 100px;
     padding-top: 55px;
 }
 .pad-bottom-50 {
@@ -63,11 +74,6 @@
 .u-text {
     text-decoration: underline;
 }
-// .header-text {
-// }
-// .page-paragraph-text {
-    
-// }
 
 @media (min-width: 2560px) {
     #FrontalDisplay {
@@ -101,9 +107,51 @@
         min-width: 100px;
         margin-right: 400px;
     }
+    .sm-invincible {
+        display: none;
+    }
 }
 @media (max-width: 480px) {
-    .service-home {
+    .service-homes {
         left: 65px;
+    }
+}
+@media (max-width: 767px) {
+    #FrontalDisplay button {
+        min-width: 10%;
+        height: 30px;
+        font-size: 6pt;
+        text-align: left;
+    }
+    #FrontalDisplay div {
+        padding-top: 20px;
+    }   
+}
+
+@media (max-width: 1199px) {
+    @media (min-width: 768px) {
+        #FrontalDisplay button {
+            min-width: 30%;
+            height: 40px;
+            font-size: 15pt;
+            text-align: left;
+        }
+        #FrontalDisplay div {
+            padding-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 1800px) {
+    @media (min-width: 1200px) {
+        #FrontalDisplay button {
+            min-width: 30%;
+            height: 50px;
+            font-size: 15pt;
+            text-align: left;
+        }
+        #FrontalDisplay div {
+            padding-top: 20px;
+        }
     }
 }

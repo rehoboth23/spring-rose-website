@@ -4,6 +4,7 @@ import {Container, Row, Col, Card} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMailBulk } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import FrontalDisplay from './frontaldisplay'
 import Doctor from '../assets/images/doctor.jpeg'
 import {
     useLocation
@@ -15,7 +16,7 @@ export default function About(props) {
     return (
         <div>
             <MyNav location={loc}/>
-            <div className="z-0 repeat-back-buffer"/>
+            <FrontalDisplay />
             <div className="bg-white z-1">
                 <Container expand="xxl"  className="z-1 pad-top-50 pad-bottom-50 bg-aqua" id="AboutPageTop">
                     <h1 className="pad-50 w-75 text-dark-blue header-text">ABOUT US<b className="color-lemon">&#8228;</b></h1>
